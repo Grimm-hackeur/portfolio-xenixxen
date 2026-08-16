@@ -23,12 +23,11 @@ export default function About() {
             className="w-16 h-16 rounded-2xl flex-shrink-0 p-0.5"
             style={{ background: 'linear-gradient(155deg, var(--color-amber-2), var(--color-amber) 60%, #4a3410)', boxShadow: '0 0 26px -8px rgba(244,183,64,0.5)' }}
           >
-            <div
-              className="w-full h-full rounded-[14px] flex items-center justify-center font-[var(--font-display)] font-bold text-xl text-[var(--color-amber)]"
-              style={{ background: 'linear-gradient(145deg, #1c1a12, #0d0c08)' }}
-            >
-              K
-            </div>
+            <img
+              src="/avatars/klivens.jpg"
+              alt="KLIVENS"
+              className="w-full h-full rounded-[14px] object-cover"
+            />
           </div>
           <div>
             <h2 className="font-[var(--font-display)] font-bold text-base">
@@ -45,9 +44,10 @@ export default function About() {
         <div className="glass glass-hover rounded-[18px] p-5 mb-6 reveal" style={{ animationDelay: '.18s' }}>
           <span className="font-[var(--font-mono)] text-[11px] text-[var(--color-amber)] tracking-widest">// BIO</span>
           <p className="text-[var(--color-muted)] leading-relaxed text-[14.5px] mt-2.5">
-            Développeur full stack, je travaille sur l'ensemble de la chaîne — de l'API
-            jusqu'à l'interface finale. Cette carte est prête à accueillir ta bio complète
-            dès que tu me la donnes.
+            Développeur full stack depuis 2022, je transforme des idées en applications complètes —
+            de la base de données jusqu'au dernier pixel de l'interface. J'aime comprendre comment
+            les choses fonctionnent en profondeur, et construire des outils qui tiennent la route,
+            pas juste qui impressionnent en démo. Toujours un projet en cours, toujours en train d'apprendre.
           </p>
         </div>
 
@@ -90,7 +90,7 @@ export default function About() {
             style={{ background: 'linear-gradient(180deg, var(--color-amber), var(--color-border))' }}
           />
           {[
-            { year: '2023', title: 'Premiers projets en Full Stack', desc: 'Les débuts sur des projets Node.js / MongoDB.' },
+            { year: '2022', title: 'Premiers projets en Full Stack', desc: 'Les débuts sur des projets Node.js / MongoDB.' },
             { year: 'Aujourd\u2019hui', title: 'Développeur Full Stack indépendant', desc: 'Conception et déploiement d\u2019applications complètes.' },
           ].map((t, i, arr) => (
             <div key={t.year} className={`relative ${i === arr.length - 1 ? '' : 'pb-5.5'}`} style={{ paddingBottom: i === arr.length - 1 ? 0 : 22 }}>
@@ -119,4 +119,4 @@ export default function About() {
       </main>
     </div>
   )
-}
+              }
