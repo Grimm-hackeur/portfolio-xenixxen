@@ -9,6 +9,7 @@ const FRIENDS = [
     skills: 'Fullstack · Bots',
     github: 'https://github.com/DEVPRIMIS',
     site: 'https://dsprimis-porfolios.zone.id',
+    avatar: '/avatars/dsprimis.jpg',
   },
 ]
 
@@ -42,12 +43,20 @@ export default function Friends() {
                     boxShadow: '0 0 22px -8px rgba(244,183,64,0.5)',
                   }}
                 >
-                  <div
-                    className="w-full h-full rounded-[13px] flex items-center justify-center font-[var(--font-display)] font-bold text-lg text-[var(--color-amber)]"
-                    style={{ background: 'linear-gradient(145deg, #1c1a12, #0d0c08)' }}
-                  >
-                    {f.name.charAt(0)}
-                  </div>
+                  {f.avatar ? (
+                    <img
+                      src={f.avatar}
+                      alt={f.name}
+                      className="w-full h-full rounded-[13px] object-cover"
+                    />
+                  ) : (
+                    <div
+                      className="w-full h-full rounded-[13px] flex items-center justify-center font-[var(--font-display)] font-bold text-lg text-[var(--color-amber)]"
+                      style={{ background: 'linear-gradient(145deg, #1c1a12, #0d0c08)' }}
+                    >
+                      {f.name.charAt(0)}
+                    </div>
+                  )}
                 </div>
 
                 <div className="flex-1 min-w-0">
