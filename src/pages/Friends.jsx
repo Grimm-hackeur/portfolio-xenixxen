@@ -1,6 +1,9 @@
 import { Link } from 'react-router-dom'
 import PageHeader from '../components/PageHeader.jsx'
 
+// Liste des amis. Pour en ajouter un : copie un bloc { ... } et remplis ses infos.
+// avatar : chemin dans public/avatars/, ou '' pour afficher une initiale à la place.
+// instagram : optionnel — laisse le champ de côté (ou vide) si pas de compte à afficher.
 const FRIENDS = [
   {
     name: 'DsPrimis',
@@ -19,6 +22,16 @@ const FRIENDS = [
     github: 'https://github.com/INCONNU-BOY-SENSEI',
     site: 'https://inconnu-boy-sensei.zone.id',
     avatar: '/avatars/inconnu.jpg',
+  },
+  {
+    name: 'Sidd',
+    realName: '',
+    role: 'Développeur · depuis 2025',
+    skills: 'Vue · Node.js · Bots',
+    github: 'https://github.com/siddtechx',
+    site: 'https://notsidd-production.up.railway.app',
+    instagram: 'https://www.instagram.com/siiddhrts',
+    avatar: '/avatars/sidd.jpg',
   },
 ]
 
@@ -83,6 +96,21 @@ export default function Friends() {
               </div>
 
               <div className="flex gap-2 mt-4">
+                {f.instagram && (
+                  <a
+                    href={f.instagram}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Instagram"
+                    className="btn-ghost-dark flex items-center justify-center w-11 rounded-xl flex-shrink-0"
+                  >
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2">
+                      <rect x="2" y="2" width="20" height="20" rx="5" />
+                      <circle cx="12" cy="12" r="4" />
+                      <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+                    </svg>
+                  </a>
+                )}
                 <a
                   href={f.github}
                   target="_blank"
@@ -120,4 +148,5 @@ export default function Friends() {
       </main>
     </div>
   )
-}
+                    }
+                      
