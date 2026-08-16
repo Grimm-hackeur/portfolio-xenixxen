@@ -11,9 +11,20 @@ const FRIENDS = [
     site: 'https://dsprimis-porfolios.zone.id',
     avatar: '/avatars/dsprimis.jpg',
   },
+  {
+    name: 'Inconnu',
+    realName: '',
+    role: 'PDG · Syrix Vision',
+    skills: 'Dev Web · Bots · Fullstack',
+    github: 'https://github.com/INCONNU-BOY-SENSEI',
+    site: 'https://inconnu-boy-sensei.zone.id',
+    avatar: '/avatars/inconnu.jpg',
+  },
 ]
 
 export default function Friends() {
+  const uniqueRoles = new Set(FRIENDS.map((f) => f.role)).size
+
   return (
     <div className="pb-4">
       <PageHeader eyebrow="Réseau" title="Friends" subtitle="D'autres développeurs que Xenix suit et recommande." />
@@ -22,7 +33,7 @@ export default function Friends() {
         <div className="flex gap-2.5 mb-5.5 reveal" style={{ animationDelay: '.1s', marginBottom: 22 }}>
           {[
             [String(FRIENDS.length), 'Profils'],
-            ['2', 'Rôles'],
+            [String(uniqueRoles), 'Rôles'],
             ['—', 'Pays'],
           ].map(([num, lbl]) => (
             <div key={lbl} className="flex-1 text-center py-3.5 rounded-[14px] border border-[var(--color-border)] bg-white/[0.02]">
@@ -61,7 +72,8 @@ export default function Friends() {
 
                 <div className="flex-1 min-w-0">
                   <h3 className="font-[var(--font-display)] font-bold text-[15.5px]">
-                    {f.name} <span className="text-[var(--color-muted)] font-medium text-[13px]">/ {f.realName}</span>
+                    {f.name}
+                    {f.realName && <span className="text-[var(--color-muted)] font-medium text-[13px]"> / {f.realName}</span>}
                   </h3>
                   <p className="text-[12.5px] text-[var(--color-muted)] mt-0.5">{f.role}</p>
                   <span className="inline-block mt-2 px-2.5 py-1 rounded-full text-[11px] font-[var(--font-mono)] text-[var(--color-amber)] bg-[var(--color-amber)]/10 border border-[#f4b74033]">
@@ -108,4 +120,5 @@ export default function Friends() {
       </main>
     </div>
   )
-}
+      }
+                    
