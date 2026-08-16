@@ -4,11 +4,11 @@ import GithubIcon from '../components/GithubIcon.jsx'
 
 const CHANNELS = [
   {
-    label: 'Email', value: 'contact@klivens.dev', href: 'mailto:contact@klivens.dev',
+    label: 'Email', value: 'xenoxxen@xenix.xen', href: 'mailto:xenizzxenn@gmail.com',
     icon: <><path d="M22 6l-10 7L2 6" /><rect x="2" y="4" width="20" height="16" rx="2" /></>,
   },
   {
-    label: 'Telegram', value: '@xenix', href: '#',
+    label: 'Telegram', value: '@Just_xenix', href: 't.me/Just_xenix',
     icon: <><line x1="22" y1="2" x2="11" y2="13" /><polygon points="22 2 15 22 11 13 2 9 22 2" /></>,
   },
   {
@@ -27,7 +27,7 @@ export default function Contact() {
     const body = encodeURIComponent(
       `Nom : ${form.name}\nEmail : ${form.email}\n\nMessage :\n${form.message}`
     )
-    window.location.href = `mailto:contact@klivens.dev?subject=${subject}&body=${body}`
+    window.location.href = `mailto:xenizzxenn@gmail.com?subject=${subject}&body=${body}`
     setSent(true)
   }
 
@@ -67,18 +67,17 @@ export default function Contact() {
             </a>
           ))}
           <a
-            href="#"
+            href="https://github.com/xenixxenox"
             className="group flex items-center gap-3.5 p-4 rounded-2xl border border-[var(--color-border)] bg-white/[0.02] relative overflow-hidden hover:border-[#f4b74055] hover:-translate-y-0.5 transition duration-300"
           >
             <span className="absolute top-3 right-4 font-[var(--font-mono)] text-[11px] tracking-widest" style={{ color: '#5a4a2a' }}>04</span>
-            <span className="w-11 h-11 rounded-[13px] flex-shrink-0 flex items-center justify-center bg-[var(--color-amber)]/10 border border-[#f4b74033] text-[var(--color-amber)] group-hover:bg-[var(--color-amber)] group-hover:text-[#1a1206] transition duration-300">
+            <span className="w-11 h-11 rounded-[13px] flex-shrink-0 flex items-center justify-center bg-[var(--color-amber)]/10 border border-[#f4b74033]https://github.com/xenixxenox text-[var(--color-amber)] group-hover:bg-[var(--color-amber)] group-hover:text-[#1a1206] transition duration-300">
               <GithubIcon size={19} />
             </span>
             <div>
               <div className="text-[11px] text-[var(--color-muted)] uppercase tracking-wide font-semibold">GitHub</div>
               <div className="text-[14.5px] font-semibold mt-0.5">klivens</div>
-            </div>
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2.2" className="ml-auto text-[var(--color-muted)] group-hover:text-[var(--color-amber)] group-hover:translate-x-1 transition duration-300">
+            </divmber)] group-hover:translate-x-1 transition duration-300">
               <path d="M5 12h14M13 6l6 6-6 6" />
             </svg>
           </a>
