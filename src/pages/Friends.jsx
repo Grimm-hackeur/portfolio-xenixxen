@@ -12,8 +12,8 @@ const FRIENDS = [
     avatar: '/avatars/dsprimis.jpg',
   },
   {
-    name: 'Inconnu',
-    realName: '',
+    name: 'Inconnu boy sensei',
+    realName: 'Dawens',
     role: 'PDG · Syrix Vision',
     skills: 'Dev Web · Bots · Fullstack',
     github: 'https://github.com/INCONNU-BOY-SENSEI',
